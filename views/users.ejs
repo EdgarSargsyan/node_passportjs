@@ -1,0 +1,27 @@
+<% layout("layout") -%>
+
+    <% if(user._id) { %>
+        <h1>
+            Name :
+            <%= user.name  %>
+                <br> Surname:
+                <%=   user.surname %>
+                    <br> Email :
+                    <%=   user.email %>
+                        <br> Gender:
+                        <%=   user.gender %>
+                            <br> Created:
+                            <%=   user.cerated %>
+                                <br>
+                                <%=   user.salt %>
+                                    <br>
+        </h1>
+        <button>
+            <a href="/users/exit">Logout</a>
+        </button>
+        <% } else { %>
+            <h1>Incorrect password or Email</h1>
+            <button>
+                <a href="/">Back</a>
+            </button>
+            <%  } %>
